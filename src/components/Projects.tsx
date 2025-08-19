@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 
+// Kategori dizisini ekliyoruz
+const categories: string[] = ['Tümü', 'Full Stack', 'Web', 'Mobile', 'Design'];
+
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Tümü');
-
-  const categories = ['Tümü', 'Web', 'Mobile', 'Design', 'Full Stack'];
 
   const projects = [
     {
@@ -108,7 +109,7 @@ const Projects: React.FC = () => {
           viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {categories.map((category, index) => (
+          {categories.map((category: string) => (
             <motion.button
               key={category}
               whileHover={{ scale: 1.05 }}
@@ -185,7 +186,7 @@ const Projects: React.FC = () => {
                   
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
+                    {project.technologies.map((tech: string) => (
                       <span
                         key={tech}
                         className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full"
@@ -235,4 +236,4 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
