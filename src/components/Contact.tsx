@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -28,15 +28,15 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: 'Konum',
-      value: 'Yenimahalle, Ankara, Türkiye',
+      value: 'Ankara, Türkiye',
       href: '#'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' }
+    { icon: Github, href: 'https://github.com/ebrarmn', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://linkedin.com/in/ebrarmn', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:ebrar.mangan03@gmail.com', label: 'Email' }
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
