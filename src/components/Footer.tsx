@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, ArrowUp, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Heart, ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToTop = (): void => {
@@ -8,10 +8,9 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:email@example.com', label: 'Email' }
+    { icon: Github, href: 'https://github.com/ebrarmn', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/ebrarmangan/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:ebrar.mangan03@gmail.com', label: 'Email' }
   ];
 
   const quickLinks = [
